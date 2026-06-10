@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  quantidade: 9.99
+  unidade: MyString
+  preco_por_unidade: 9.99
+  descricao: MyText
+  disponivel: false
+  data_pesca: 2026-06-02
+
+two:
+  nome: MyString
+  quantidade: 9.99
+  unidade: MyString
+  preco_por_unidade: 9.99
+  descricao: MyText
+  disponivel: false
+  data_pesca: 2026-06-02

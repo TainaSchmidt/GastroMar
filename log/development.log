@@ -1,0 +1,105 @@
+Started GET "/" for 127.0.0.1 at 2026-06-01 12:21:42 -0300
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='GastroMar'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GastroMar'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-8.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-8.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 1128ms (Views: 187.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[35m (273.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='GastroMar'*/[0m
+  [1m[35m (143.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='GastroMar'*/[0m
+  [1m[35m (136.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505) /*application='GastroMar'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (208.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (237.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='GastroMar'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (144.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2026-06-02 23:23:18.582999', '2026-06-02 23:23:18.583006') RETURNING "key" /*application='GastroMar'*/[0m
+Migrating to CreateUsuarios (20260602224157)
+  [1m[36mTRANSACTION (232.3ms)[0m  [1m[35mBEGIN /*application='GastroMar'*/[0m
+  [1m[35m (437.7ms)[0m  [1m[35mCREATE TABLE "usuario" ("id_usuario" bigserial NOT NULL PRIMARY KEY, "senha_hash" character varying NOT NULL, "tipo" character varying NOT NULL, "nome" character varying NOT NULL, "telefone" character varying NOT NULL, "bairro" character varying NOT NULL, "cidade" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='GastroMar'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (196.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260602224157') RETURNING "version" /*application='GastroMar'*/[0m
+  [1m[36mTRANSACTION (303.3ms)[0m  [1m[35mCOMMIT /*application='GastroMar'*/[0m
+Migrating to CreatePescados (20260602224217)
+  [1m[36mTRANSACTION (176.1ms)[0m  [1m[35mBEGIN /*application='GastroMar'*/[0m
+  [1m[35m (139.2ms)[0m  [1m[35mCREATE TABLE "pescados" ("id_pescado" bigserial NOT NULL PRIMARY KEY, "nome" character varying NOT NULL, "quantidade" decimal(10,2) NOT NULL, "unidade" character varying NOT NULL, "preco_por_unidade" decimal(10,2), "descricao" text, "disponivel" boolean DEFAULT TRUE, "data_pesca" date NOT NULL, "id_usuario" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='GastroMar'*/[0m
+  [1m[35m (205.9ms)[0m  [1m[35mALTER TABLE "pescados" ADD CONSTRAINT "fk_rails_c791859469"
+FOREIGN KEY ("id_usuario")
+  REFERENCES "usuario" ("id_usuario")
+ ON DELETE CASCADE /*application='GastroMar'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (183.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260602224217') RETURNING "version" /*application='GastroMar'*/[0m
+  [1m[36mTRANSACTION (212.9ms)[0m  [1m[35mCOMMIT /*application='GastroMar'*/[0m
+  [1m[35m (135.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505) /*application='GastroMar'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (204.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+  [1m[35mSQL (135.3ms)[0m  [1m[35mSET search_path TO public /*application='GastroMar'*/[0m
+  [1m[35mSQL (205.2ms)[0m  [1m[35mSET search_path TO "\$user", public, extensions /*application='GastroMar'*/[0m
+  [1m[35mSQL (300.9ms)[0m  [1m[35mSET search_path TO extensions /*application='GastroMar'*/[0m
+  [1m[35mSQL (204.3ms)[0m  [1m[35mSET search_path TO "\$user", public, extensions /*application='GastroMar'*/[0m
+  [1m[35mSQL (300.4ms)[0m  [1m[35mSET search_path TO public /*application='GastroMar'*/[0m
+  [1m[35mSQL (220.9ms)[0m  [1m[35mSET search_path TO "\$user", public, extensions /*application='GastroMar'*/[0m
+  [1m[35mSQL (135.8ms)[0m  [1m[35mSET search_path TO extensions /*application='GastroMar'*/[0m
+  [1m[35mSQL (135.0ms)[0m  [1m[35mSET search_path TO "\$user", public, extensions /*application='GastroMar'*/[0m
+Started GET "/" for 127.0.0.1 at 2026-06-02 20:43:56 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (137.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by PescadosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (244.8ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:8
+  Rendered pescados/index.html.erb within layouts/application (Duration: 261.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 945.8ms | GC: 0.0ms)
+Completed 200 OK in 7677ms (Views: 1112.3ms | ActiveRecord: 2489.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-06-02 20:48:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (210.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by PescadosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (204.8ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:8
+  Rendered pescados/index.html.erb within layouts/application (Duration: 216.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 690.4ms | GC: 0.0ms)
+Completed 200 OK in 4741ms (Views: 511.6ms | ActiveRecord: 2345.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-06-02 21:18:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (205.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by PescadosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (249.6ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:8
+  Rendered pescados/index.html.erb within layouts/application (Duration: 263.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 367.1ms | GC: 0.0ms)
+Completed 200 OK in 4266ms (Views: 169.7ms | ActiveRecord: 2391.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados/new" for ::1 at 2026-06-02 21:18:56 -0300
+Processing by PescadosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/new.html.erb within layouts/application
+  Rendered pescados/new.html.erb within layouts/application (Duration: 706.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 709.3ms | GC: 0.0ms)
+Completed 200 OK in 994ms (Views: 711.5ms | ActiveRecord: 233.1ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-06-02 21:46:02 -0300
+Processing by PescadosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (2992.6ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:8
+  Rendered pescados/index.html.erb within layouts/application (Duration: 3003.0ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 3032.4ms | GC: 0.2ms)
+Completed 200 OK in 3177ms (Views: -1276.3ms | ActiveRecord: 4415.6ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/pescados/new" for ::1 at 2026-06-02 21:46:07 -0300
+Processing by PescadosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/new.html.erb within layouts/application
+  Rendered pescados/new.html.erb within layouts/application (Duration: 7.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | GC: 0.0ms)
+Completed 200 OK in 56ms (Views: 10.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+

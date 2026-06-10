@@ -1,0 +1,2 @@
+module PescadosHelper
+end

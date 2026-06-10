@@ -1,0 +1,21 @@
+<h1>GastroMar - Pescados Disponíveis</h1>
+
+<%= link_to "Cadastrar Novo Pescado", new_pescado_path, style: "background: #0284c7; color: white; padding: 10px; text-decoration: none; border-radius: 5px;" %>
+
+<hr>
+
+<% if @pescados.empty? %>
+  <p>Nenhum pescado disponível no momento. Que tal cadastrar o primeiro?</p>
+<% else %>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px;">
+    <% @pescados.each do |pescado| %>
+      <div style="border: 1px solid #ccc; padding: 15px; border-radius: 8px; background: #f9f9f9;">
+        <h3><%= pescado.nome %></h3>
+        <p><strong>Quantidade:</strong> <%= pescado.quantidade %> <%= pescado.unidade %></p>
+        <p><strong>Preço:</strong> R$ <%= pescado.preco_por_unidade %> por <%= pescado.unidade %></p>
+        <p><strong>Pescado em:</strong> <%= pescado.data_pesca.strftime('%d/%m/%Y') if pescado.data_pesca %></p>
+        <%= link_to "Ver Detalhes", pescado_path(pescado) %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
