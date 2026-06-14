@@ -1,57 +1,58 @@
-<div class="container mt-5" style="max-width: 650px;">
+<div class="form-card">
+  <div class="form-card-header">
+    <h1>🎣 Cadastrar Novo Pescado</h1>
+    <p>Preencha as informações do que você pescou hoje</p>
+  </div>
 
-  <div class="card shadow-sm border-0" style="border-radius: 12px; overflow: hidden;">
+  <div class="form-card-body">
+    <%= form_with(model: @pescado, local: true) do |f| %>
+      
+      <div class="section-title">Identificação</div>
+      
+      <div class="form-group">
+        <%= f.label :nome, "Nome do Peixe / Fruto do Mar <span class='required'>*</span>".html_safe %>
+        <%= f.text_field :nome, placeholder: "Ex: Camarão, Tainha, Robalo, Lula...", required: true %>
+      </div>
 
-    <div class="card-header py-3" style="background: linear-gradient(135deg, #1e3a5f, #2563eb);">
-      <h4 class="mb-0 text-white fw-semibold">
-         Cadastrar Novo Pescado
-      </h4>
-    </div>
+      <div class="form-group">
+        <%= f.label :descricao, "Descrição / Observações" %>
+        <%= f.text_area :descricao, placeholder: "Informações adicionais..." %>
+      </div>
 
-    <div class="card-body p-4" style="background-color: #f8fafc;">
+      <div class="section-title">Quantidade e Preço</div>
 
-      <%= form_with model: @pescado, local: true do |form| %>
-
-        <div class="row g-3">
-
-          <div class="col-12">
-            <%= form.label :nome, "Nome do Peixe / Fruto do Mar", class: "form-label fw-semibold text-secondary" %>
-            <%= form.text_field :nome, required: true, class: "form-control", placeholder: "Ex: Camarão, Tainha, Robalo..." %>
-          </div>
-
-          <div class="col-md-6">
-            <%= form.label :quantidade, "Quantidade", class: "form-label fw-semibold text-secondary" %>
-            <%= form.number_field :quantidade, step: :any, required: true, class: "form-control", placeholder: "Ex: 10" %>
-          </div>
-
-          <div class="col-md-6">
-            <%= form.label :unidade, "Unidade de Medida", class: "form-label fw-semibold text-secondary" %>
-            <%= form.text_field :unidade, required: true, class: "form-control", placeholder: "kg, unidade, dúzia..." %>
-          </div>
-
-          <div class="col-md-6">
-            <%= form.label :preco_por_unidade, "Preço por Unidade (R$)", class: "form-label fw-semibold text-secondary" %>
-            <%= form.number_field :preco_por_unidade, step: :any, class: "form-control", placeholder: "0,00" %>
-          </div>
-
-          <div class="col-md-6">
-            <%= form.label :data_pesca, "Data da Pesca", class: "form-label fw-semibold text-secondary" %>
-            <%= form.date_field :data_pesca, required: true, class: "form-control" %>
-          </div>
-
-          <div class="col-12">
-            <%= form.label :descricao, "Descrição / Observações", class: "form-label fw-semibold text-secondary" %>
-            <%= form.text_area :descricao, rows: 3, class: "form-control", placeholder: "Informações adicionais sobre o pescado..." %>
-          </div>
-
-          <div class="col-12 d-flex gap-2 mt-2">
-            <%= form.submit "Salvar Pescado", class: "btn text-white fw-semibold px-4", style: "background-color: #2563eb;" %>
-            <%= link_to "Cancelar", pescados_path, class: "btn btn-outline-secondary px-4" %>
-          </div>
-
+      <div class="row-2">
+        <div class="form-group">
+          <%= f.label :quantidade, "Quantidade <span class='required'>*</span>".html_safe %>
+          <%= f.number_field :quantidade, step: "any", min: 0, required: true %>
         </div>
-      <% end %>
+        <div class="form-group">
+          <%= f.label :unidade, "Unidade de Medida <span class='required'>*</span>".html_safe %>
+          <%= f.text_field :unidade, placeholder: "kg, unidade, dúzia...", required: true %>
+        </div>
+      </div>
 
+      <div class="row-2">
+        <div class="form-group">
+          <%= f.label :preco_por_unidade, "Preço por Unidade (R$)" %>
+          <%= f.number_field :preco_por_unidade, step: "0.01", min: 0 %>
+          <p class="hint">Deixe em branco para combinar depois</p>
+        </div>
+        <div class="form-group">
+          <%= f.label :data_pesca, "Data da Pesca <span class='required'>*</span>".html_safe %>
+          <%= f.date_field :data_pesca, required: true %>
+        </div>
+      </div>
+
+      <div class="form-actions" style="display: flex; gap: 10px; margin-top: 24px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
+        <%= f.submit "✓ Salvar Pescado", class: "btn-primary" %>
+        <%= link_to "Cancelar", pescados_path, class: "btn-secondary" %>
+      </div>
+    <% end %>
+
+    <div class="tip-box">
+      <strong>💡 Dica</strong>
+      Quanto mais completas as informações, mais fácil para os restaurantes encontrarem o seu pescado.
     </div>
   </div>
 </div>

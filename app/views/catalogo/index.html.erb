@@ -1,0 +1,48 @@
+<div class="page-bar">
+  <div class="page-title">
+    Catálogo de Pescados
+    <small>Confira as ofertas disponíveis hoje para o seu restaurante</small>
+  </div>
+</div>
+
+<% if @pescados.any? %>
+  <div class="grid">
+    <% @pescados.each do |pescado| %>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">🐟</div>
+          <span class="card-nome"><%= pescado.nome %></span>
+        </div>
+        <div class="card-body">
+          <div class="info-row">
+            <span class="info-label">Quantidade</span>
+            <span class="info-value"><%= pescado.quantidade %> <%= pescado.unidade %></span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Preço</span>
+            <span class="info-value preco">
+              <%= pescado.preco_por_unidade.present? ? "R$ #{number_with_precision(pescado.preco_por_unidade, precision: 2)}" : "A combinar" %>
+            </span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Pescado em</span>
+            <span class="info-value"><%= pescado.data_pesca&.strftime("%d/%m/%Y") %></span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Status</span>
+            <span class="badge-fresco">✓ Fresco</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <%= link_to "Ver Detalhes e Comprar", produto_catalogo_path(pescado), class: "btn-detalhes" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <div class="empty-state">
+    <div class="icon">🎣</div>
+    <h3>Nenhum pescado disponível no momento</h3>
+    <p>Os pescadores ainda não cadastraram ofertas. Volte mais tarde!</p>
+  </div>
+<% end %>

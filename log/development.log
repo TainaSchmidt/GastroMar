@@ -103,3 +103,444 @@ Processing by PescadosController#new as HTML
 Completed 200 OK in 56ms (Views: 10.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for ::1 at 2026-06-14 15:21:48 -0300
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "18.213.155.45", port 6543 failed: FATAL:  (ENOTFOUND) tenant/user postgres.cofjgebswpvzubsndpxs not found
+connection to server at "18.213.155.45", port 6543 failed: FATAL:  (ENOTFOUND) tenant/user postgres.cofjgebswpvzubsndpxs not found
+)
+Caused by: PG::ConnectionBad (connection to server at "18.213.155.45", port 6543 failed: FATAL:  (ENOTFOUND) tenant/user postgres.cofjgebswpvzubsndpxs not found
+connection to server at "18.213.155.45", port 6543 failed: FATAL:  (ENOTFOUND) tenant/user postgres.cofjgebswpvzubsndpxs not found
+)
+
+Information for: ActiveRecord::ConnectionNotEstablished (connection to server at "18.213.155.45", port 6543 failed: FATAL:  (ENOTFOUND) tenant/user postgres.cofjgebswpvzubsndpxs not found
+connection to server at "18.213.155.45", port 6543 failed: FATAL:  (ENOTFOUND) tenant/user postgres.cofjgebswpvzubsndpxs not found
+):
+  
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:61:in `rescue in new_client'
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:57:in `new_client'
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:960:in `connect'
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:972:in `reconnect'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:719:in `block (2 levels) in reconnect!'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1290:in `attempt_configure_connection'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:716:in `block in reconnect!'
+activesupport (8.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:715:in `reconnect!'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:830:in `block in verify!'
+activesupport (8.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:817:in `verify!'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:839:in `connect!'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1056:in `block in with_raw_connection'
+activesupport (8.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1055:in `with_raw_connection'
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract/quoting.rb:75:in `quote'
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1180:in `quoted_scope'
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1157:in `data_source_sql'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract/schema_statements.rb:61:in `table_exists?'
+activerecord (8.1.3) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:463:in `with_connection'
+activerecord (8.1.3) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.1.3) lib/active_record/migration.rb:1440:in `initialize'
+activerecord (8.1.3) lib/active_record/migration.rb:1288:in `new'
+activerecord (8.1.3) lib/active_record/migration.rb:1288:in `open'
+activerecord (8.1.3) lib/active_record/migration.rb:763:in `block (2 levels) in pending_migrations'
+activerecord (8.1.3) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.1.3) lib/active_record/migration.rb:762:in `block in pending_migrations'
+activerecord (8.1.3) lib/active_record/migration.rb:761:in `each'
+activerecord (8.1.3) lib/active_record/migration.rb:761:in `pending_migrations'
+activerecord (8.1.3) lib/active_record/migration.rb:740:in `check_pending_migrations'
+activerecord (8.1.3) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.1.3) lib/active_support/file_update_checker.rb:88:in `execute'
+activerecord (8.1.3) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.1.3) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.1.3) lib/active_record/migration.rb:657:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (8.1.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:20:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.3.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.1.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.1.3) lib/rails/rack/logger.rb:29:in `call'
+propshaft (1.3.2) lib/propshaft/quiet_assets.rb:11:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/remote_ip.rb:98:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.6) lib/rack/method_override.rb:28:in `call'
+rack (3.2.6) lib/rack/runtime.rb:24:in `call'
+activesupport (8.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:20:in `call'
+propshaft (1.3.2) lib/propshaft/server.rb:37:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.6) lib/rack/sendfile.rb:131:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.1.3) lib/rails/engine.rb:534:in `call'
+puma (8.0.2) lib/puma/configuration.rb:305:in `call'
+puma (8.0.2) lib/puma/response.rb:79:in `block in handle_request'
+puma (8.0.2) lib/puma/thread_pool.rb:434:in `with_force_shutdown'
+puma (8.0.2) lib/puma/response.rb:78:in `handle_request'
+puma (8.0.2) lib/puma/server.rb:508:in `process_client'
+puma (8.0.2) lib/puma/server.rb:263:in `block in run'
+puma (8.0.2) lib/puma/thread_pool.rb:246:in `block in spawn_thread'
+
+Information for cause: PG::ConnectionBad (connection to server at "18.213.155.45", port 6543 failed: FATAL:  (ENOTFOUND) tenant/user postgres.cofjgebswpvzubsndpxs not found
+connection to server at "18.213.155.45", port 6543 failed: FATAL:  (ENOTFOUND) tenant/user postgres.cofjgebswpvzubsndpxs not found
+):
+  
+pg-1.6.3-x64-mingw (ucrt) lib/pg/connection.rb:751:in `polling_loop'
+pg-1.6.3-x64-mingw (ucrt) lib/pg/connection.rb:795:in `async_connect_or_reset'
+pg-1.6.3-x64-mingw (ucrt) lib/pg/connection.rb:951:in `connect_to_hosts'
+pg-1.6.3-x64-mingw (ucrt) lib/pg/connection.rb:871:in `new'
+pg-1.6.3-x64-mingw (ucrt) lib/pg.rb:88:in `connect'
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:58:in `new_client'
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:960:in `connect'
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:972:in `reconnect'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:719:in `block (2 levels) in reconnect!'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1290:in `attempt_configure_connection'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:716:in `block in reconnect!'
+activesupport (8.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:715:in `reconnect!'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:830:in `block in verify!'
+activesupport (8.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:817:in `verify!'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:839:in `connect!'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1056:in `block in with_raw_connection'
+activesupport (8.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1055:in `with_raw_connection'
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql/quoting.rb:128:in `quote_string'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract/quoting.rb:75:in `quote'
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql/quoting.rb:122:in `quote'
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1180:in `quoted_scope'
+activerecord (8.1.3) lib/active_record/connection_adapters/postgresql/schema_statements.rb:1157:in `data_source_sql'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract/schema_statements.rb:61:in `table_exists?'
+activerecord (8.1.3) lib/active_record/schema_migration.rb:55:in `block in create_table'
+activerecord (8.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:463:in `with_connection'
+activerecord (8.1.3) lib/active_record/schema_migration.rb:54:in `create_table'
+activerecord (8.1.3) lib/active_record/migration.rb:1440:in `initialize'
+activerecord (8.1.3) lib/active_record/migration.rb:1288:in `new'
+activerecord (8.1.3) lib/active_record/migration.rb:1288:in `open'
+activerecord (8.1.3) lib/active_record/migration.rb:763:in `block (2 levels) in pending_migrations'
+activerecord (8.1.3) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (8.1.3) lib/active_record/migration.rb:762:in `block in pending_migrations'
+activerecord (8.1.3) lib/active_record/migration.rb:761:in `each'
+activerecord (8.1.3) lib/active_record/migration.rb:761:in `pending_migrations'
+activerecord (8.1.3) lib/active_record/migration.rb:740:in `check_pending_migrations'
+activerecord (8.1.3) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.1.3) lib/active_support/file_update_checker.rb:88:in `execute'
+activerecord (8.1.3) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.1.3) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.1.3) lib/active_record/migration.rb:657:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (8.1.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:20:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.3.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.1.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.1.3) lib/rails/rack/logger.rb:29:in `call'
+propshaft (1.3.2) lib/propshaft/quiet_assets.rb:11:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/remote_ip.rb:98:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.6) lib/rack/method_override.rb:28:in `call'
+rack (3.2.6) lib/rack/runtime.rb:24:in `call'
+activesupport (8.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:20:in `call'
+propshaft (1.3.2) lib/propshaft/server.rb:37:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.6) lib/rack/sendfile.rb:131:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.1.3) lib/rails/engine.rb:534:in `call'
+puma (8.0.2) lib/puma/configuration.rb:305:in `call'
+puma (8.0.2) lib/puma/response.rb:79:in `block in handle_request'
+puma (8.0.2) lib/puma/thread_pool.rb:434:in `with_force_shutdown'
+puma (8.0.2) lib/puma/response.rb:78:in `handle_request'
+puma (8.0.2) lib/puma/server.rb:508:in `process_client'
+puma (8.0.2) lib/puma/server.rb:263:in `block in run'
+puma (8.0.2) lib/puma/thread_pool.rb:246:in `block in spawn_thread'
+Started GET "/" for ::1 at 2026-06-14 15:27:44 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (136.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by PescadosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (152.4ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  Rendered pescados/index.html.erb within layouts/application (Duration: 209.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 225.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 6130ms (ActiveRecord: 2292.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `catalogo_path' for #<ActionView::Base:0x0000000000e920>)
+Caused by: NameError (undefined local variable or method `catalogo_path' for #<ActionView::Base:0x0000000000e920>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `catalogo_path' for #<ActionView::Base:0x0000000000e920>):
+    112:     <div class="logo">Gastro<span>Mar</span></div>
+    113:     <nav>
+    114:       <%= link_to "Catálogo Restaurante", catalogo_path %>
+    115:       <%= link_to "Meu Painel Pescador", pescados_path %>
+    116:     </nav>
+    117:   </header>
+    118: 
+  
+app/views/layouts/application.html.erb:115
+
+Information for cause: NameError (undefined local variable or method `catalogo_path' for #<ActionView::Base:0x0000000000e920>):
+  
+app/views/layouts/application.html.erb:115
+  [1m[36mTRANSACTION (241.6ms)[0m  [1m[35mBEGIN /*application='GastroMar'*/[0m
+  [1m[36mUsuario Create (551.6ms)[0m  [1m[32mINSERT INTO "usuario" ("senha_hash", "tipo", "nome", "telefone", "bairro", "cidade", "created_at", "updated_at") VALUES ('senha123', 'pescador', 'Zé Pescador', '51999999999', 'Centro', 'Lajeado', '2026-06-14 18:59:27.735717', '2026-06-14 18:59:27.735717') RETURNING "id_usuario" /*application='GastroMar'*/[0m
+  [1m[36mTRANSACTION (216.8ms)[0m  [1m[35mCOMMIT /*application='GastroMar'*/[0m
+  [1m[36mTRANSACTION (254.2ms)[0m  [1m[35mBEGIN /*application='GastroMar'*/[0m
+  [1m[36mUsuario Create (458.2ms)[0m  [1m[32mINSERT INTO "usuario" ("senha_hash", "tipo", "nome", "telefone", "bairro", "cidade", "created_at", "updated_at") VALUES ('senha345', 'restaurante', 'Restaurante Maré Alta', '51888888888', 'Gonzaga', 'Venâncio Aires', '2026-06-14 19:00:42.828449', '2026-06-14 19:00:42.828449') RETURNING "id_usuario" /*application='GastroMar'*/[0m
+  [1m[36mTRANSACTION (203.2ms)[0m  [1m[35mCOMMIT /*application='GastroMar'*/[0m
+Started GET "/" for ::1 at 2026-06-14 16:43:43 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (223.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by CatalogoController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (226.9ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 242.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 265.5ms | GC: 0.0ms)
+Completed 200 OK in 4498ms (Views: 186.4ms | ActiveRecord: 2435.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-06-14 16:46:03 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (290.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by CatalogoController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (190.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 202.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 599.8ms | GC: 0.0ms)
+Completed 200 OK in 4753ms (Views: 446.2ms | ActiveRecord: 2461.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2026-06-14 16:50:46 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (309.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by SessoesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessoes/new.html.erb within layouts/application
+  Rendered sessoes/new.html.erb within layouts/application (Duration: 190.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 196.9ms | GC: 0.0ms)
+Completed 200 OK in 384ms (Views: 225.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-06-14 17:02:05 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (182.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by CatalogoController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (189.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 224.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 382.7ms | GC: 0.0ms)
+Completed 200 OK in 5497ms (Views: 340.6ms | ActiveRecord: 2431.7ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2026-06-14 17:02:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/login" for ::1 at 2026-06-14 17:02:21 -0300
+Processing by SessoesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessoes/new.html.erb within layouts/application
+  Rendered sessoes/new.html.erb within layouts/application (Duration: 59.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 63.0ms | GC: 0.0ms)
+Completed 200 OK in 146ms (Views: 93.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-06-14 17:02:50 -0300
+Processing by SessoesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "telefone"=>"51999999999", "senha"=>"senha123", "commit"=>"Entrar"}
+  [1m[36mUsuario Load (153.6ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."telefone" = '51999999999' LIMIT 1 /*action='create',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/sessoes_controller.rb:9:in `create'
+Redirected to http://localhost:3000/pescados
+↳ app/controllers/sessoes_controller.rb:20:in `create'
+Completed 302 Found in 665ms (ActiveRecord: 572.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-14 17:02:50 -0300
+Processing by PescadosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (273.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  Rendered pescados/index.html.erb within layouts/application (Duration: 284.8ms | GC: 0.0ms)
+  [1m[36mUsuario Load (206.0ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 509.0ms | GC: 0.0ms)
+Completed 200 OK in 570ms (Views: 52.4ms | ActiveRecord: 479.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados/new" for ::1 at 2026-06-14 17:02:57 -0300
+Processing by PescadosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/new.html.erb within layouts/application
+  Rendered pescados/new.html.erb within layouts/application (Duration: 133.7ms | GC: 0.0ms)
+  [1m[36mUsuario Load (264.1ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='new',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 406.8ms | GC: 0.0ms)
+Completed 200 OK in 741ms (Views: 144.7ms | ActiveRecord: 264.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/pescados" for ::1 at 2026-06-14 17:03:35 -0300
+Processing by PescadosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pescado"=>{"nome"=>"Camarão", "descricao"=>"Camarão novo", "quantidade"=>"5", "unidade"=>"kg", "preco_por_unidade"=>"100", "data_pesca"=>"2026-06-14"}, "commit"=>"✓ Salvar Pescado"}
+  [1m[36mUsuario Load (238.2ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" ORDER BY "usuario"."id_usuario" ASC LIMIT 1 /*action='create',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (189.6ms)[0m  [1m[35mBEGIN /*action='create',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:25:in `create'
+  [1m[36mUsuario Load (394.6ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='create',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:25:in `create'
+  [1m[36mPescado Create (226.6ms)[0m  [1m[32mINSERT INTO "pescados" ("nome", "quantidade", "unidade", "preco_por_unidade", "descricao", "disponivel", "data_pesca", "id_usuario", "created_at", "updated_at") VALUES ('Camarão', 5.0, 'kg', 100.0, 'Camarão novo', TRUE, '2026-06-14', 1, '2026-06-14 20:03:36.601529', '2026-06-14 20:03:36.601529') RETURNING "id_pescado" /*action='create',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (150.9ms)[0m  [1m[35mCOMMIT /*action='create',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:25:in `create'
+Redirected to http://localhost:3000/pescados
+↳ app/controllers/pescados_controller.rb:26:in `create'
+Completed 302 Found in 1772ms (ActiveRecord: 1199.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-14 17:03:37 -0300
+Processing by PescadosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (265.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  [1m[36mPescado Load (210.5ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:12
+  Rendered pescados/index.html.erb within layouts/application (Duration: 493.9ms | GC: 0.0ms)
+  [1m[36mUsuario Load (268.0ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 775.5ms | GC: 0.0ms)
+Completed 200 OK in 811ms (Views: 34.5ms | ActiveRecord: 743.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados/1" for ::1 at 2026-06-14 17:11:18 -0300
+Processing by PescadosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPescado Load (3489.9ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/show.html.erb within layouts/application
+  Rendered pescados/show.html.erb within layouts/application (Duration: 9.1ms | GC: 0.0ms)
+  [1m[36mUsuario Load (149.2ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 169.9ms | GC: 0.0ms)
+Completed 200 OK in 3844ms (Views: 24.0ms | ActiveRecord: 5387.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados/1/edit" for ::1 at 2026-06-14 17:11:27 -0300
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for PescadosController):
+  
+actionpack (8.1.3) lib/abstract_controller/base.rb:149:in `process'
+actionview (8.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.1.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.1.3) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.1.3) lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+actionpack (8.1.3) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:35:in `block in serve'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:86:in `block in recognize'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:66:in `each'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:66:in `recognize'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:31:in `serve'
+actionpack (8.1.3) lib/action_dispatch/routing/route_set.rb:906:in `call'
+railties (8.1.3) lib/rails/engine/lazy_route_set.rb:60:in `call'
+rack (3.2.6) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.2.6) lib/rack/etag.rb:29:in `call'
+rack (3.2.6) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.6) lib/rack/head.rb:15:in `call'
+actionpack (8.1.3) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/cookies.rb:708:in `call'
+activerecord (8.1.3) lib/active_record/migration.rb:671:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (8.1.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:20:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.3.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.1.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.1.3) lib/rails/rack/logger.rb:29:in `call'
+propshaft (1.3.2) lib/propshaft/quiet_assets.rb:11:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/remote_ip.rb:98:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.6) lib/rack/method_override.rb:28:in `call'
+rack (3.2.6) lib/rack/runtime.rb:24:in `call'
+activesupport (8.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:20:in `call'
+propshaft (1.3.2) lib/propshaft/server.rb:37:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.6) lib/rack/sendfile.rb:131:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.1.3) lib/rails/engine.rb:534:in `call'
+puma (8.0.2) lib/puma/configuration.rb:305:in `call'
+puma (8.0.2) lib/puma/response.rb:79:in `block in handle_request'
+puma (8.0.2) lib/puma/thread_pool.rb:434:in `with_force_shutdown'
+puma (8.0.2) lib/puma/response.rb:78:in `handle_request'
+puma (8.0.2) lib/puma/server.rb:508:in `process_client'
+puma (8.0.2) lib/puma/server.rb:263:in `block in run'
+puma (8.0.2) lib/puma/thread_pool.rb:246:in `block in spawn_thread'
+  [1m[35m (234.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505) /*application='GastroMar'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (215.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (261.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='GastroMar'*/[0m
+Migrating to AddLoginToUsuarios (20260614202205)
+  [1m[36mTRANSACTION (224.1ms)[0m  [1m[35mBEGIN /*application='GastroMar'*/[0m
+  [1m[35m (466.6ms)[0m  [1m[35mALTER TABLE "usuarios" ADD "login" character varying /*application='GastroMar'*/[0m
+  [1m[36mTRANSACTION (300.7ms)[0m  [1m[31mROLLBACK /*application='GastroMar'*/[0m
+  [1m[35m (264.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505) /*application='GastroMar'*/[0m
+  [1m[35m (204.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505) /*application='GastroMar'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (210.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (203.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='GastroMar'*/[0m
+Migrating to AddLoginToUsuarios (20260614202205)
+  [1m[36mTRANSACTION (246.8ms)[0m  [1m[35mBEGIN /*application='GastroMar'*/[0m
+  [1m[35m (452.0ms)[0m  [1m[35mALTER TABLE "usuario" ADD "login" character varying /*application='GastroMar'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (138.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260614202205') RETURNING "version" /*application='GastroMar'*/[0m
+  [1m[36mTRANSACTION (169.0ms)[0m  [1m[35mCOMMIT /*application='GastroMar'*/[0m
+  [1m[35m (195.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505) /*application='GastroMar'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (205.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+  [1m[35mSQL (204.1ms)[0m  [1m[35mSET search_path TO public /*application='GastroMar'*/[0m
+  [1m[35mSQL (206.4ms)[0m  [1m[35mSET search_path TO "\$user", public, extensions /*application='GastroMar'*/[0m
+  [1m[35mSQL (199.7ms)[0m  [1m[35mSET search_path TO extensions /*application='GastroMar'*/[0m
+  [1m[35mSQL (241.4ms)[0m  [1m[35mSET search_path TO "\$user", public, extensions /*application='GastroMar'*/[0m
+  [1m[35mSQL (192.5ms)[0m  [1m[35mSET search_path TO public /*application='GastroMar'*/[0m
+  [1m[35mSQL (204.4ms)[0m  [1m[35mSET search_path TO "\$user", public, extensions /*application='GastroMar'*/[0m
+  [1m[35mSQL (192.6ms)[0m  [1m[35mSET search_path TO extensions /*application='GastroMar'*/[0m
+  [1m[35mSQL (204.4ms)[0m  [1m[35mSET search_path TO "\$user", public, extensions /*application='GastroMar'*/[0m
+  [1m[36mUsuario Load (264.8ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."nome" = 'Zé Pescador' LIMIT 1 /*application='GastroMar'*/[0m
+  [1m[36mTRANSACTION (196.6ms)[0m  [1m[35mBEGIN /*application='GastroMar'*/[0m
+  [1m[36mUsuario Update (597.1ms)[0m  [1m[33mUPDATE "usuario" SET "updated_at" = '2026-06-14 20:31:05.893169', "login" = 'zepescador' WHERE "usuario"."id_usuario" = 1 /*application='GastroMar'*/[0m
+  [1m[36mTRANSACTION (220.6ms)[0m  [1m[35mCOMMIT /*application='GastroMar'*/[0m
+  [1m[36mUsuario Load (232.5ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."nome" = 'Restaurante Maré Alta' LIMIT 1 /*application='GastroMar'*/[0m
+  [1m[36mTRANSACTION (154.3ms)[0m  [1m[35mBEGIN /*application='GastroMar'*/[0m
+  [1m[36mUsuario Update (308.2ms)[0m  [1m[33mUPDATE "usuario" SET "updated_at" = '2026-06-14 20:31:21.404075', "login" = 'marealta' WHERE "usuario"."id_usuario" = 2 /*application='GastroMar'*/[0m
+  [1m[36mTRANSACTION (257.6ms)[0m  [1m[35mCOMMIT /*application='GastroMar'*/[0m

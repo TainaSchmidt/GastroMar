@@ -1,26 +1,24 @@
 class PescadosController < ApplicationController
- # Tela principal: Mostra todos os pescados disponíveis
+  # Esse comando faz o Rails procurar o peixe correto antes de mostrar, editar, atualizar ou deletar
+  before_action :set_pescado, only: [:show, :edit, :update, :destroy]
+
+  # 1. READ (Lista todos)
   def index
-    @pescados = Pescado.where(disponivel: true)
+    @pescados = Pescado.all
   end
 
-  # Tela de detalhes: Mostra um pescado específico
+  # READ (Mostra os detalhes de um só)
   def show
-    @pescado = Pescado.find(params[:id])
   end
 
-  # Tela do Formulário: Prepara um pescado novo para ser criado
+  # 2. CREATE (Abre a tela de novo cadastro)
   def new
     @pescado = Pescado.new
   end
 
-  # Ação invisível: Recebe os dados do formulário e salva no Supabase
+  # CREATE (Salva no banco de dados)
   def create
     @pescado = Pescado.new(pescado_params)
-    
-    # IMPORTANTE: Como ainda não temos login criado, vamos fingir que 
-    # o primeiro usuário do banco é o dono desse pescado temporariamente.
-    @pescado.id_usuario = Usuario.first&.id_usuario || 1 
 
     if @pescado.save
       redirect_to pescados_path, notice: "Pescado cadastrado com sucesso!"
@@ -29,10 +27,41 @@ class PescadosController < ApplicationController
     end
   end
 
+  # 3. UPDATE (Abre a tela de edição)
+  def edit
+    # O @pescado já é carregado automaticamente pelo before_action lá em cima
+  end
+
+  # UPDATE (Salva as alterações no banco)
+  def update
+    if @pescado.update(pescado_params)
+      redirect_to pescados_path, notice: "Pescado atualizado com sucesso!"
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  # 4. DELETE (Exclui do banco)
+  def destroy
+    @pescado.destroy
+    redirect_to pescados_path, notice: "Pescado excluído com sucesso!"
+  end
+
   private
 
-  # Segurança do Rails para filtrar o que vem do formulário
-  def pescado_params
-    params.require(:pescado).permit(:nome, :quantidade, :unidade, :preco_por_unidade, :descricao, :data_pesca)
+  # Método auxiliar para buscar o peixe pelo ID da URL
+  def set_pescado
+    @pescado = Pescado.find(params[:id])
+  end
+
+  # Proteção do Rails: só permite salvar no banco os campos que a gente autorizar aqui
+    params.require(:pescado).permit(
+      :nome, 
+      :quantidade, 
+      :unidade, 
+      :preco, 
+      :descricao, 
+      :disponivel
+    )
   end
 end

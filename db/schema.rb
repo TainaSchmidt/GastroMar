@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_06_02_224217) do
+ActiveRecord::Schema[8.1].define(version: 2026_06_14_202205) do
   create_schema "extensions"
 
   # These are extensions that must be enabled in order to support this database
@@ -37,6 +37,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_06_02_224217) do
     t.string "bairro", null: false
     t.string "cidade", null: false
     t.datetime "created_at", null: false
+    t.string "login"
     t.string "nome", null: false
     t.string "senha_hash", null: false
     t.string "telefone", null: false

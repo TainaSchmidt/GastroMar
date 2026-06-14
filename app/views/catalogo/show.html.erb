@@ -1,0 +1,51 @@
+<div class="detail-card">
+  <div class="card-hero">
+    <div class="hero-icon">🐟</div>
+    <div class="hero-info">
+      <h1><%= @pescado.nome %></h1>
+      <p>Pescado em <%= @pescado.data_pesca&.strftime("%d/%m/%Y") %></p>
+      <span class="badge-disponivel">✓ Disponível para compra</span>
+    </div>
+  </div>
+
+  <div class="metrics-grid">
+    <div class="metric">
+      <div class="metric-label">Quantidade</div>
+      <div class="metric-value"><%= @pescado.quantidade %></div>
+      <div class="metric-unit"><%= @pescado.unidade %> disponíveis</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">Preço</div>
+      <div class="metric-value preco">
+        <%= @pescado.preco_por_unidade.present? ? "R$ #{@pescado.preco_por_unidade}" : "A combinar" %>
+      </div>
+      <div class="metric-unit">por <%= @pescado.unidade %></div>
+    </div>
+  </div>
+
+  <div class="detail-section">
+    <div class="section-title">Informações do Pescado</div>
+    <div class="detail-row">
+      <span class="detail-label">Nome</span>
+      <span class="detail-value"><%= @pescado.nome %></span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Descrição</span>
+    </div>
+    <div class="descricao-box">
+      <%= @pescado.descricao.present? ? @pescado.descricao : "Nenhuma observação informada pelo pescador." %>
+    </div>
+  </div>
+</div>
+
+<div class="actions-bar">
+  <%= link_to "← Voltar ao Catálogo", catalogo_path, class: "btn-secondary" %>
+  
+  <% # Lógica do WhatsApp %>
+  <% 
+    telefone = "5511999999999" # Substitua pela variável do telefone do pescador no futuro: @pescado.user.telefone
+    mensagem = "Olá! Vi seu anúncio de #{@pescado.quantidade} #{@pescado.unidade} de #{@pescado.nome} no GastroMar. Ainda está disponível?"
+    url_whatsapp = "https://wa.me/#{telefone}?text=#{CGI.escape(mensagem)}"
+  %>
+  <%= link_to "💬 Fazer Pedido via WhatsApp", url_whatsapp, target: "_blank", class: "btn-primary", style: "background: #25D366;" %>
+</div>

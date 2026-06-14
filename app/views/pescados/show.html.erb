@@ -1,2 +1,29 @@
-<h1>Pescados#show</h1>
-<p>Find me in app/views/pescados/show.html.erb</p>
+<div class="detail-card">
+  <div class="card-hero">
+    <div class="hero-icon">⚓</div>
+    <div class="hero-info">
+      <h1><%= @pescado.nome %></h1>
+      <p>Seu anúncio ativo</p>
+    </div>
+  </div>
+
+  <div class="metrics-grid">
+    <div class="metric">
+      <div class="metric-label">Quantidade</div>
+      <div class="metric-value"><%= @pescado.quantidade %></div>
+      <div class="metric-unit"><%= @pescado.unidade %></div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">Preço Unitário</div>
+      <div class="metric-value preco">
+        <%= @pescado.preco_por_unidade.present? ? "R$ #{@pescado.preco_por_unidade}" : "A combinar" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="actions-bar">
+  <%= link_to "← Voltar ao Painel", pescados_path, class: "btn-secondary" %>
+  <%= link_to "✏️ Editar Anúncio", edit_pescado_path(@pescado), class: "btn-primary" %>
+  <%= button_to "🗑 Excluir Anúncio", pescado_path(@pescado), method: :delete, class: "btn-danger", form: { style: "display: inline-block;" }, data: { turbo_confirm: "Tem certeza?" } %>
+</div>
