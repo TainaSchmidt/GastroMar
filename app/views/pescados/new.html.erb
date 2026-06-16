@@ -5,6 +5,16 @@
   </div>
 
   <div class="form-card-body">
+    <% if @pescado.errors.any? %>
+        <div style="background: #fef2f2; color: #ef4444; padding: 14px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #fecaca; font-size: 14px;">
+            <strong>Ops! Não foi possível salvar o pescado pelos seguintes motivos:</strong>
+            <ul style="margin-top: 6px; margin-left: 20px;">
+            <% @pescado.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+            </ul>
+        </div>
+    <% end %>
     <%= form_with(model: @pescado, local: true) do |f| %>
       
       <div class="section-title">Identificação</div>

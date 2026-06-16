@@ -1,0 +1,60 @@
+<div class="form-container">
+  <div class="form-card-header">
+    <h2>Editar Pescado</h2>
+  </div>
+
+  <div class="form-card-body">
+    <% if @pescado.errors.any? %>
+      <div style="background: #fef2f2; color: #ef4444; padding: 14px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #fecaca; font-size: 14px;">
+        <strong>Ops! Não foi possível salvar as alterações:</strong>
+        <ul style="margin-top: 6px; margin-left: 20px;">
+          <% @pescado.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= form_with(model: @pescado, local: true) do |form| %>
+      <div class="form-group">
+        <%= form.label :nome, "Nome do Pescado" %>
+        <%= form.text_field :nome, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :quantidade, "Quantidade" %>
+        <%= form.number_field :quantidade, step: :any, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :unidade, "Unidade (Kg, Dúzia, Unidade)" %>
+        <%= form.text_field :unidade, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :preco_por_unidade, "Preço por Unidade" %>
+        <%= form.number_field :preco_por_unidade, step: :any, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :data_pesca, "Data da Pesca" %>
+        <%= form.date_field :data_pesca, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :descricao, "Descrição / Detalhes" %>
+        <%= form.text_area :descricao, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :disponivel, "Disponível para venda?" %>
+        <%= form.check_box :disponivel %>
+      </div>
+
+      <div class="form-actions">
+        <%= form.submit "Atualizar Pescado", class: "btn btn-primary" %>
+        <%= link_to "Cancelar", pescados_path, class: "btn btn-secondary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

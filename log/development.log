@@ -544,3 +544,1421 @@ Migrating to AddLoginToUsuarios (20260614202205)
   [1m[36mTRANSACTION (154.3ms)[0m  [1m[35mBEGIN /*application='GastroMar'*/[0m
   [1m[36mUsuario Update (308.2ms)[0m  [1m[33mUPDATE "usuario" SET "updated_at" = '2026-06-14 20:31:21.404075', "login" = 'marealta' WHERE "usuario"."id_usuario" = 2 /*application='GastroMar'*/[0m
   [1m[36mTRANSACTION (257.6ms)[0m  [1m[35mCOMMIT /*application='GastroMar'*/[0m
+Started GET "/" for ::1 at 2026-06-15 21:44:19 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (147.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by CatalogoController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (148.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Load (149.1ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+Started GET "/" for ::1 at 2026-06-15 21:44:28 -0300
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 568.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 568.9ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 4553ms (ActiveRecord: 2074.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `produto_catalogo_path' for #<ActionView::Base:0x0000000000f0c8>)
+Caused by: NoMethodError (undefined method `produto_catalogo_path' for #<ActionView::Base:0x0000000000f0c8>)
+
+Information for: ActionView::Template::Error (undefined method `produto_catalogo_path' for #<ActionView::Base:0x0000000000f0c8>):
+    35:         </div>
+    36:         <div class="card-footer">
+    37:           <%= link_to "Ver Detalhes e Comprar", produto_catalogo_path(pescado), class: "btn-detalhes" %>
+    38:         </div>
+    39:       </div>
+    40:     <% end %>
+    41:   </div>
+  
+app/views/catalogo/index.html.erb:38
+app/views/catalogo/index.html.erb:11
+
+Information for cause: NoMethodError (undefined method `produto_catalogo_path' for #<ActionView::Base:0x0000000000f0c8>):
+  
+app/views/catalogo/index.html.erb:38
+app/views/catalogo/index.html.erb:11
+Processing by CatalogoController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (145.7ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+Started GET "/" for ::1 at 2026-06-15 21:44:29 -0300
+Processing by CatalogoController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Load (144.8ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 450.4ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 450.9ms | GC: 0.2ms)
+Completed 500 Internal Server Error in 618ms (ActiveRecord: 582.5ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `produto_catalogo_path' for #<ActionView::Base:0x00000000013240>)
+Caused by: NoMethodError (undefined method `produto_catalogo_path' for #<ActionView::Base:0x00000000013240>)
+
+Information for: ActionView::Template::Error (undefined method `produto_catalogo_path' for #<ActionView::Base:0x00000000013240>):
+    35:         </div>
+    36:         <div class="card-footer">
+    37:           <%= link_to "Ver Detalhes e Comprar", produto_catalogo_path(pescado), class: "btn-detalhes" %>
+    38:         </div>
+    39:       </div>
+    40:     <% end %>
+    41:   </div>
+  
+app/views/catalogo/index.html.erb:38
+app/views/catalogo/index.html.erb:11
+
+Information for cause: NoMethodError (undefined method `produto_catalogo_path' for #<ActionView::Base:0x00000000013240>):
+  
+app/views/catalogo/index.html.erb:38
+app/views/catalogo/index.html.erb:11
+  [1m[36mPescado Exists? (2600.8ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Load (147.1ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 2757.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2757.8ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 2766ms (ActiveRecord: 4078.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `produto_catalogo_path' for #<ActionView::Base:0x00000000013538>)
+Caused by: NoMethodError (undefined method `produto_catalogo_path' for #<ActionView::Base:0x00000000013538>)
+
+Information for: ActionView::Template::Error (undefined method `produto_catalogo_path' for #<ActionView::Base:0x00000000013538>):
+    35:         </div>
+    36:         <div class="card-footer">
+    37:           <%= link_to "Ver Detalhes e Comprar", produto_catalogo_path(pescado), class: "btn-detalhes" %>
+    38:         </div>
+    39:       </div>
+    40:     <% end %>
+    41:   </div>
+  
+app/views/catalogo/index.html.erb:38
+app/views/catalogo/index.html.erb:11
+
+Information for cause: NoMethodError (undefined method `produto_catalogo_path' for #<ActionView::Base:0x00000000013538>):
+  
+app/views/catalogo/index.html.erb:38
+app/views/catalogo/index.html.erb:11
+Started GET "/" for ::1 at 2026-06-15 21:49:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (163.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by CatalogoController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (163.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Load (162.9ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 549.7ms | GC: 0.0ms)
+  [1m[36mUsuario Load (164.1ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 996.7ms | GC: 0.0ms)
+Completed 200 OK in 4231ms (Views: 196.4ms | ActiveRecord: 2623.0ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-15 21:49:42 -0300
+  
+ArgumentError (Reported error must be an Exception, got: #<SyntaxError: C:/Users/taina/GastroMar/app/controllers/pescados_controller.rb:67: syntax error, unexpected `end'>)
+Caused by: SyntaxError (C:/Users/taina/GastroMar/app/controllers/pescados_controller.rb:67: syntax error, unexpected `end')
+
+Information for: ArgumentError (Reported error must be an Exception, got: #<SyntaxError: C:/Users/taina/GastroMar/app/controllers/pescados_controller.rb:67: syntax error, unexpected `end'>):
+  
+activesupport (8.1.3) lib/active_support/error_reporter.rb:235:in `report'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:36:in `rescue in call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:32:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.3.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.1.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.1.3) lib/rails/rack/logger.rb:29:in `call'
+propshaft (1.3.2) lib/propshaft/quiet_assets.rb:11:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/remote_ip.rb:98:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.6) lib/rack/method_override.rb:28:in `call'
+rack (3.2.6) lib/rack/runtime.rb:24:in `call'
+activesupport (8.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:20:in `call'
+propshaft (1.3.2) lib/propshaft/server.rb:37:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.6) lib/rack/sendfile.rb:131:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.1.3) lib/rails/engine.rb:534:in `call'
+puma (8.0.2) lib/puma/configuration.rb:305:in `call'
+puma (8.0.2) lib/puma/response.rb:79:in `block in handle_request'
+puma (8.0.2) lib/puma/thread_pool.rb:434:in `with_force_shutdown'
+puma (8.0.2) lib/puma/response.rb:78:in `handle_request'
+puma (8.0.2) lib/puma/server.rb:508:in `process_client'
+puma (8.0.2) lib/puma/server.rb:263:in `block in run'
+puma (8.0.2) lib/puma/thread_pool.rb:246:in `block in spawn_thread'
+
+Information for cause: SyntaxError (C:/Users/taina/GastroMar/app/controllers/pescados_controller.rb:67: syntax error, unexpected `end'):
+  
+app/controllers/pescados_controller.rb:67: syntax error, unexpected `end'
+Started GET "/" for ::1 at 2026-06-15 21:49:50 -0300
+Processing by CatalogoController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (162.5ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Load (163.0ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 334.0ms | GC: 0.0ms)
+  [1m[36mUsuario Load (162.6ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 502.4ms | GC: 0.0ms)
+Completed 200 OK in 514ms (Views: 15.2ms | ActiveRecord: 488.0ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2026-06-15 21:49:55 -0300
+Processing by SessoesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/login
+↳ app/controllers/sessoes_controller.rb:35:in `destroy'
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2026-06-15 21:49:55 -0300
+Processing by SessoesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessoes/new.html.erb within layouts/application
+  Rendered sessoes/new.html.erb within layouts/application (Duration: 71.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 72.1ms | GC: 0.0ms)
+Completed 200 OK in 140ms (Views: 79.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-06-15 21:50:25 -0300
+Processing by SessoesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"marealta", "senha"=>"senha345", "commit"=>"Entrar"}
+  [1m[36mUsuario Load (162.8ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."login" = 'marealta' LIMIT 1 /*action='create',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/sessoes_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+↳ app/controllers/sessoes_controller.rb:22:in `create'
+Completed 302 Found in 179ms (ActiveRecord: 162.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-06-15 21:50:26 -0300
+Processing by CatalogoController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (162.7ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Load (162.5ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 340.4ms | GC: 0.0ms)
+  [1m[36mUsuario Load (162.9ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 2 LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 511.3ms | GC: 0.0ms)
+Completed 200 OK in 524ms (Views: 24.7ms | ActiveRecord: 488.1ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/catalogo/1" for ::1 at 2026-06-15 21:50:31 -0300
+Processing by CatalogoController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPescado Load (171.6ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/catalogo_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/show.html.erb within layouts/application
+  Rendered catalogo/show.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  [1m[36mUsuario Load (162.5ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 2 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 167.2ms | GC: 0.0ms)
+Completed 200 OK in 390ms (Views: 5.4ms | ActiveRecord: 334.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/catalogo/1" for ::1 at 2026-06-15 21:50:42 -0300
+Processing by CatalogoController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPescado Load (164.2ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/catalogo_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/show.html.erb within layouts/application
+  Rendered catalogo/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mUsuario Load (162.4ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 2 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 167.2ms | GC: 0.0ms)
+Completed 200 OK in 343ms (Views: 6.2ms | ActiveRecord: 326.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/catalogo/1" for ::1 at 2026-06-15 21:50:44 -0300
+Processing by CatalogoController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPescado Load (164.6ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/catalogo_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/show.html.erb within layouts/application
+  Rendered catalogo/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mUsuario Load (162.1ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 2 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 169.6ms | GC: 0.0ms)
+Completed 200 OK in 346ms (Views: 8.8ms | ActiveRecord: 326.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/catalogo/1" for ::1 at 2026-06-15 21:51:44 -0300
+Processing by CatalogoController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPescado Load (164.0ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/catalogo_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/show.html.erb within layouts/application
+  Rendered catalogo/show.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  [1m[36mUsuario Load (163.7ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 2 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 179.1ms | GC: 0.0ms)
+Completed 200 OK in 364ms (Views: 18.5ms | ActiveRecord: 327.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2026-06-15 21:51:51 -0300
+Processing by SessoesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/login
+↳ app/controllers/sessoes_controller.rb:35:in `destroy'
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2026-06-15 21:51:51 -0300
+Processing by SessoesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessoes/new.html.erb within layouts/application
+  Rendered sessoes/new.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-06-15 21:52:11 -0300
+Processing by SessoesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"zepescador", "senha"=>"ef", "commit"=>"Entrar"}
+  [1m[36mUsuario Load (163.1ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."login" = 'zepescador' LIMIT 1 /*action='create',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/sessoes_controller.rb:9:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessoes/new.html.erb within layouts/application
+  Rendered sessoes/new.html.erb within layouts/application (Duration: 7.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 198ms (Views: 13.6ms | ActiveRecord: 163.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-06-15 21:52:15 -0300
+Processing by SessoesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"zepescador", "senha"=>"senha123", "commit"=>"Entrar"}
+  [1m[36mUsuario Load (163.0ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."login" = 'zepescador' LIMIT 1 /*action='create',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/sessoes_controller.rb:9:in `create'
+Redirected to http://localhost:3000/pescados
+↳ app/controllers/sessoes_controller.rb:20:in `create'
+Completed 302 Found in 188ms (ActiveRecord: 163.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-15 21:52:16 -0300
+  
+ArgumentError (Reported error must be an Exception, got: #<SyntaxError: C:/Users/taina/GastroMar/app/controllers/pescados_controller.rb:67: syntax error, unexpected `end'>)
+Caused by: SyntaxError (C:/Users/taina/GastroMar/app/controllers/pescados_controller.rb:67: syntax error, unexpected `end')
+
+Information for: ArgumentError (Reported error must be an Exception, got: #<SyntaxError: C:/Users/taina/GastroMar/app/controllers/pescados_controller.rb:67: syntax error, unexpected `end'>):
+  
+activesupport (8.1.3) lib/active_support/error_reporter.rb:235:in `report'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:36:in `rescue in call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:32:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.3.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.1.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.1.3) lib/rails/rack/logger.rb:29:in `call'
+propshaft (1.3.2) lib/propshaft/quiet_assets.rb:11:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/remote_ip.rb:98:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.6) lib/rack/method_override.rb:28:in `call'
+rack (3.2.6) lib/rack/runtime.rb:24:in `call'
+activesupport (8.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:20:in `call'
+propshaft (1.3.2) lib/propshaft/server.rb:37:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.6) lib/rack/sendfile.rb:131:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.1.3) lib/rails/engine.rb:534:in `call'
+puma (8.0.2) lib/puma/configuration.rb:305:in `call'
+puma (8.0.2) lib/puma/response.rb:79:in `block in handle_request'
+puma (8.0.2) lib/puma/thread_pool.rb:434:in `with_force_shutdown'
+puma (8.0.2) lib/puma/response.rb:78:in `handle_request'
+puma (8.0.2) lib/puma/server.rb:508:in `process_client'
+puma (8.0.2) lib/puma/server.rb:263:in `block in run'
+puma (8.0.2) lib/puma/thread_pool.rb:246:in `block in spawn_thread'
+
+Information for cause: SyntaxError (C:/Users/taina/GastroMar/app/controllers/pescados_controller.rb:67: syntax error, unexpected `end'):
+  
+app/controllers/pescados_controller.rb:67: syntax error, unexpected `end'
+Started POST "/login" for ::1 at 2026-06-15 21:52:31 -0300
+Processing by SessoesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"zepescador", "senha"=>"senha123", "commit"=>"Entrar"}
+  [1m[36mUsuario Load (162.3ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."login" = 'zepescador' LIMIT 1 /*action='create',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/sessoes_controller.rb:9:in `create'
+Redirected to http://localhost:3000/pescados
+↳ app/controllers/sessoes_controller.rb:20:in `create'
+Completed 302 Found in 183ms (ActiveRecord: 162.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-15 21:52:31 -0300
+  
+ArgumentError (Reported error must be an Exception, got: #<SyntaxError: C:/Users/taina/GastroMar/app/controllers/pescados_controller.rb:67: syntax error, unexpected `end'>)
+Caused by: SyntaxError (C:/Users/taina/GastroMar/app/controllers/pescados_controller.rb:67: syntax error, unexpected `end')
+
+Information for: ArgumentError (Reported error must be an Exception, got: #<SyntaxError: C:/Users/taina/GastroMar/app/controllers/pescados_controller.rb:67: syntax error, unexpected `end'>):
+  
+activesupport (8.1.3) lib/active_support/error_reporter.rb:235:in `report'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:36:in `rescue in call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:32:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.3.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.1.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.1.3) lib/rails/rack/logger.rb:29:in `call'
+propshaft (1.3.2) lib/propshaft/quiet_assets.rb:11:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/remote_ip.rb:98:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.6) lib/rack/method_override.rb:28:in `call'
+rack (3.2.6) lib/rack/runtime.rb:24:in `call'
+activesupport (8.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:20:in `call'
+propshaft (1.3.2) lib/propshaft/server.rb:37:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.6) lib/rack/sendfile.rb:131:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.1.3) lib/rails/engine.rb:534:in `call'
+puma (8.0.2) lib/puma/configuration.rb:305:in `call'
+puma (8.0.2) lib/puma/response.rb:79:in `block in handle_request'
+puma (8.0.2) lib/puma/thread_pool.rb:434:in `with_force_shutdown'
+puma (8.0.2) lib/puma/response.rb:78:in `handle_request'
+puma (8.0.2) lib/puma/server.rb:508:in `process_client'
+puma (8.0.2) lib/puma/server.rb:263:in `block in run'
+puma (8.0.2) lib/puma/thread_pool.rb:246:in `block in spawn_thread'
+
+Information for cause: SyntaxError (C:/Users/taina/GastroMar/app/controllers/pescados_controller.rb:67: syntax error, unexpected `end'):
+  
+app/controllers/pescados_controller.rb:67: syntax error, unexpected `end'
+Started GET "/" for ::1 at 2026-06-16 11:43:57 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (198.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by CatalogoController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (366.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Load (344.8ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 1044.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1058.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 5934ms (ActiveRecord: 3821.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_usuario' for #<ActionView::Base:0x0000000000f0a0>)
+Caused by: NameError (undefined local variable or method `current_usuario' for #<ActionView::Base:0x0000000000f0a0>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `current_usuario' for #<ActionView::Base:0x0000000000f0a0>):
+    112:     <div class="logo">Gastro<span>Mar</span></div>
+    113:     <nav>
+    114:       <% if current_usuario %>
+    115:         <% if current_usuario.tipo == 'restaurante' %>
+    116:           <%= link_to "Catálogo Restaurante", catalogo_index_path %>
+    117:         <% elsif current_usuario.tipo == 'pescador' %>
+    118:           <%= link_to "Meu Painel Pescador", pescados_path %>
+  
+app/views/layouts/application.html.erb:115
+
+Information for cause: NameError (undefined local variable or method `current_usuario' for #<ActionView::Base:0x0000000000f0a0>):
+  
+app/views/layouts/application.html.erb:115
+Started GET "/" for ::1 at 2026-06-16 11:44:08 -0300
+Processing by CatalogoController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (228.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Load (189.6ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 431.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 435.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 462ms (ActiveRecord: 417.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_usuario' for #<ActionView::Base:0x0000000000f460>)
+Caused by: NameError (undefined local variable or method `current_usuario' for #<ActionView::Base:0x0000000000f460>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `current_usuario' for #<ActionView::Base:0x0000000000f460>):
+    112:     <div class="logo">Gastro<span>Mar</span></div>
+    113:     <nav>
+    114:       <% if current_usuario %>
+    115:         <% if current_usuario.tipo == 'restaurante' %>
+    116:           <%= link_to "Catálogo Restaurante", catalogo_index_path %>
+    117:         <% elsif current_usuario.tipo == 'pescador' %>
+    118:           <%= link_to "Meu Painel Pescador", pescados_path %>
+  
+app/views/layouts/application.html.erb:115
+
+Information for cause: NameError (undefined local variable or method `current_usuario' for #<ActionView::Base:0x0000000000f460>):
+  
+app/views/layouts/application.html.erb:115
+Started GET "/" for ::1 at 2026-06-16 11:44:27 -0300
+Processing by CatalogoController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (474.5ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Load (1894.4ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 2380.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2384.6ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 2406ms (ActiveRecord: 2368.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_usuario' for #<ActionView::Base:0x0000000000f780>)
+Caused by: NameError (undefined local variable or method `current_usuario' for #<ActionView::Base:0x0000000000f780>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `current_usuario' for #<ActionView::Base:0x0000000000f780>):
+    112:     <div class="logo">Gastro<span>Mar</span></div>
+    113:     <nav>
+    114:       <% if current_usuario %>
+    115:         <% if current_usuario.tipo == 'restaurante' %>
+    116:           <%= link_to "Catálogo Restaurante", catalogo_index_path %>
+    117:         <% elsif current_usuario.tipo == 'pescador' %>
+    118:           <%= link_to "Meu Painel Pescador", pescados_path %>
+  
+app/views/layouts/application.html.erb:115
+
+Information for cause: NameError (undefined local variable or method `current_usuario' for #<ActionView::Base:0x0000000000f780>):
+  
+app/views/layouts/application.html.erb:115
+Started GET "/" for ::1 at 2026-06-16 11:50:28 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (306.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by CatalogoController#index as HTML
+  [1m[36mUsuario Load (308.9ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (258.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Load (204.5ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 540.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 549.0ms | GC: 0.0ms)
+Completed 200 OK in 6820ms (Views: 142.8ms | ActiveRecord: 4004.5ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/catalogo/1" for ::1 at 2026-06-16 11:51:18 -0300
+Processing by CatalogoController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (242.9ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  [1m[36mPescado Load (196.2ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/catalogo_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/show.html.erb within layouts/application
+  Rendered catalogo/show.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | GC: 0.0ms)
+Completed 200 OK in 675ms (Views: 11.9ms | ActiveRecord: 439.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/catalogo/1" for ::1 at 2026-06-16 11:51:23 -0300
+Processing by CatalogoController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (297.3ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  [1m[36mPescado Load (297.4ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/catalogo_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/show.html.erb within layouts/application
+  Rendered catalogo/show.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | GC: 0.0ms)
+Completed 200 OK in 650ms (Views: 9.6ms | ActiveRecord: 594.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-16 11:51:28 -0300
+Processing by PescadosController#index as HTML
+  [1m[36mUsuario Load (267.8ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (240.9ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  [1m[36mPescado Load (224.6ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:12
+  Rendered pescados/index.html.erb within layouts/application (Duration: 480.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 483.1ms | GC: 0.0ms)
+Completed 200 OK in 919ms (Views: 44.6ms | ActiveRecord: 733.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-16 11:51:32 -0300
+Processing by PescadosController#index as HTML
+  [1m[36mUsuario Load (206.9ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (313.4ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  [1m[36mPescado Load (300.7ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:12
+  Rendered pescados/index.html.erb within layouts/application (Duration: 628.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 633.0ms | GC: 0.0ms)
+Completed 200 OK in 889ms (Views: 22.4ms | ActiveRecord: 820.9ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-16 11:51:37 -0300
+Processing by PescadosController#index as HTML
+  [1m[36mUsuario Load (305.4ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (294.9ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  [1m[36mPescado Load (300.9ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:12
+  Rendered pescados/index.html.erb within layouts/application (Duration: 612.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 617.3ms | GC: 0.0ms)
+Completed 200 OK in 1003ms (Views: 25.5ms | ActiveRecord: 901.2ms (3 queries, 0 cached) | GC: 0.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2026-06-16 11:51:41 -0300
+Processing by SessoesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/login
+↳ app/controllers/sessoes_controller.rb:35:in `destroy'
+Completed 302 Found in 19ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2026-06-16 11:51:41 -0300
+Processing by SessoesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessoes/new.html.erb within layouts/application
+  Rendered sessoes/new.html.erb within layouts/application (Duration: 99.5ms | GC: 0.0ms)
+  [1m[36mUsuario Load (278.0ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" IS NULL LIMIT 1 /*action='new',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 386.8ms | GC: 0.0ms)
+Completed 200 OK in 556ms (Views: 122.8ms | ActiveRecord: 278.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-06-16 11:52:03 -0300
+Processing by SessoesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"zepescador", "senha"=>"senha123", "commit"=>"Entrar"}
+  [1m[36mUsuario Load (245.7ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."login" = 'zepescador' LIMIT 1 /*action='create',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/sessoes_controller.rb:9:in `create'
+Redirected to http://localhost:3000/pescados
+↳ app/controllers/sessoes_controller.rb:20:in `create'
+Completed 302 Found in 300ms (ActiveRecord: 245.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-16 11:52:03 -0300
+Processing by PescadosController#index as HTML
+  [1m[36mUsuario Load (253.3ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (294.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  [1m[36mPescado Load (185.6ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:12
+  Rendered pescados/index.html.erb within layouts/application (Duration: 495.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 500.2ms | GC: 0.0ms)
+Completed 200 OK in 798ms (Views: 23.9ms | ActiveRecord: 733.1ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados/1/edit" for ::1 at 2026-06-16 11:52:12 -0300
+Processing by PescadosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (261.1ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='edit',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  [1m[36mPescado Load (303.1ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 1 LIMIT 1 /*action='edit',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:54:in `set_pescado'
+Completed 406 Not Acceptable in 652ms (ActiveRecord: 564.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::MissingExactTemplate (PescadosController#edit is missing a template for request formats: text/html):
+  
+actionpack (8.1.3) lib/action_controller/metal/implicit_render.rb:49:in `default_render'
+actionpack (8.1.3) lib/action_controller/metal/basic_implicit_render.rb:9:in `send_action'
+actionpack (8.1.3) lib/abstract_controller/base.rb:221:in `process_action'
+actionpack (8.1.3) lib/action_controller/metal/rendering.rb:199:in `process_action'
+actionpack (8.1.3) lib/abstract_controller/callbacks.rb:267:in `block in process_action'
+activesupport (8.1.3) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+turbo-rails (2.0.23) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.23) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (8.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (8.1.3) lib/action_text/rendering.rb:24:in `with_renderer'
+actiontext (8.1.3) lib/action_text/engine.rb:72:in `block (4 levels) in <class:Engine>'
+activesupport (8.1.3) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (8.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (8.1.3) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (8.1.3) lib/abstract_controller/callbacks.rb:266:in `process_action'
+actionpack (8.1.3) lib/action_controller/metal/rescue.rb:36:in `process_action'
+actionpack (8.1.3) lib/action_controller/metal/instrumentation.rb:76:in `block in process_action'
+activesupport (8.1.3) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (8.1.3) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (8.1.3) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (8.1.3) lib/action_controller/metal/instrumentation.rb:75:in `process_action'
+actionpack (8.1.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (8.1.3) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (8.1.3) lib/abstract_controller/base.rb:154:in `process'
+actionview (8.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.1.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.1.3) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.1.3) lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+actionpack (8.1.3) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:35:in `block in serve'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:86:in `block in recognize'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:66:in `each'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:66:in `recognize'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:31:in `serve'
+actionpack (8.1.3) lib/action_dispatch/routing/route_set.rb:906:in `call'
+railties (8.1.3) lib/rails/engine/lazy_route_set.rb:60:in `call'
+rack (3.2.6) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.2.6) lib/rack/etag.rb:29:in `call'
+rack (3.2.6) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.6) lib/rack/head.rb:15:in `call'
+actionpack (8.1.3) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/cookies.rb:708:in `call'
+activerecord (8.1.3) lib/active_record/migration.rb:671:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (8.1.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:20:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.3.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.1.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.1.3) lib/rails/rack/logger.rb:29:in `call'
+propshaft (1.3.2) lib/propshaft/quiet_assets.rb:11:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/remote_ip.rb:98:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.6) lib/rack/method_override.rb:28:in `call'
+rack (3.2.6) lib/rack/runtime.rb:24:in `call'
+activesupport (8.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:20:in `call'
+propshaft (1.3.2) lib/propshaft/server.rb:37:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.6) lib/rack/sendfile.rb:131:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.1.3) lib/rails/engine.rb:534:in `call'
+puma (8.0.2) lib/puma/configuration.rb:305:in `call'
+puma (8.0.2) lib/puma/response.rb:79:in `block in handle_request'
+puma (8.0.2) lib/puma/thread_pool.rb:434:in `with_force_shutdown'
+puma (8.0.2) lib/puma/response.rb:78:in `handle_request'
+puma (8.0.2) lib/puma/server.rb:508:in `process_client'
+puma (8.0.2) lib/puma/server.rb:263:in `block in run'
+puma (8.0.2) lib/puma/thread_pool.rb:246:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2026-06-16 12:13:24 -0300
+Started GET "/" for ::1 at 2026-06-16 12:13:24 -0300
+Started GET "/" for 127.0.0.1 at 2026-06-16 12:13:24 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (526.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by CatalogoController#index as HTML
+Processing by CatalogoController#index as HTML
+Processing by CatalogoController#index as HTML
+  [1m[36mUsuario Load (263.1ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (285.4ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Load (272.1ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 845.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 853.3ms | GC: 0.0ms)
+Completed 200 OK in 12184ms (Views: 661.3ms | ActiveRecord: 4784.0ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-06-16 12:13:46 -0300
+Processing by CatalogoController#index as HTML
+  [1m[36mUsuario Load (311.0ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (293.8ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Load (283.0ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 602.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 617.5ms | GC: 0.0ms)
+Completed 200 OK in 977ms (Views: 44.4ms | ActiveRecord: 887.8ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-06-16 12:13:47 -0300
+Processing by CatalogoController#index as HTML
+  [1m[36mUsuario Load (4539.4ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mUsuario Load (4549.3ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mUsuario Load (270.2ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (213.5ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Exists? (220.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Load (281.8ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 529.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 533.2ms | GC: 0.0ms)
+Completed 200 OK in 14005ms (Views: 40.3ms | ActiveRecord: 7373.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mPescado Exists? (293.5ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Load (274.8ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 565.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 569.6ms | GC: 0.0ms)
+Completed 200 OK in 14033ms (Views: 76.7ms | ActiveRecord: 7352.0ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mPescado Load (195.5ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 527.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 532.1ms | GC: 0.0ms)
+Completed 200 OK in 832ms (Views: 46.2ms | ActiveRecord: 759.4ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-06-16 12:14:04 -0300
+Processing by CatalogoController#index as HTML
+  [1m[36mUsuario Load (322.1ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" IS NULL LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+Redirected to http://localhost:3000/login
+↳ app/controllers/application_controller.rb:24:in `verificar_login'
+Filter chain halted as :verificar_login rendered or redirected
+Completed 302 Found in 376ms (ActiveRecord: 322.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2026-06-16 12:14:05 -0300
+Processing by SessoesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessoes/new.html.erb within layouts/application
+  Rendered sessoes/new.html.erb within layouts/application (Duration: 140.3ms | GC: 0.0ms)
+  [1m[36mUsuario Load (276.0ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" IS NULL LIMIT 1 /*action='new',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 425.8ms | GC: 0.0ms)
+Completed 200 OK in 530ms (Views: 161.8ms | ActiveRecord: 276.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-06-16 12:14:20 -0300
+Processing by SessoesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"zepescador", "senha"=>"senha123", "commit"=>"Entrar"}
+  [1m[36mUsuario Load (319.7ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."login" = 'zepescador' LIMIT 1 /*action='create',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/sessoes_controller.rb:9:in `create'
+Redirected to http://localhost:3000/pescados
+↳ app/controllers/sessoes_controller.rb:20:in `create'
+Completed 302 Found in 349ms (ActiveRecord: 319.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-16 12:14:20 -0300
+Processing by PescadosController#index as HTML
+  [1m[36mUsuario Load (253.9ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (228.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  [1m[36mPescado Load (286.4ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:12
+  Rendered pescados/index.html.erb within layouts/application (Duration: 534.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 539.1ms | GC: 0.0ms)
+Completed 200 OK in 998ms (Views: 53.1ms | ActiveRecord: 768.4ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-16 12:14:26 -0300
+Processing by PescadosController#index as HTML
+  [1m[36mUsuario Load (249.7ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (191.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  [1m[36mPescado Load (271.8ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:12
+  Rendered pescados/index.html.erb within layouts/application (Duration: 478.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 481.9ms | GC: 0.0ms)
+Completed 200 OK in 811ms (Views: 52.4ms | ActiveRecord: 712.7ms (3 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/pescados/1" for ::1 at 2026-06-16 12:14:30 -0300
+Processing by PescadosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (319.6ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  [1m[36mPescado Load (298.9ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:54:in `set_pescado'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/show.html.erb within layouts/application
+  Rendered pescados/show.html.erb within layouts/application (Duration: 6.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | GC: 0.0ms)
+Completed 200 OK in 721ms (Views: 14.1ms | ActiveRecord: 618.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/pescados/1" for ::1 at 2026-06-16 12:14:33 -0300
+Processing by PescadosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUsuario Load (197.6ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='destroy',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  [1m[36mPescado Load (192.8ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 1 LIMIT 1 /*action='destroy',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:54:in `set_pescado'
+  [1m[36mTRANSACTION (337.3ms)[0m  [1m[35mBEGIN /*action='destroy',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:46:in `destroy'
+  [1m[36mPescado Destroy (644.7ms)[0m  [1m[31mDELETE FROM "pescados" WHERE "pescados"."id_pescado" = 1 /*action='destroy',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (300.5ms)[0m  [1m[35mCOMMIT /*action='destroy',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:46:in `destroy'
+Redirected to http://localhost:3000/pescados
+↳ app/controllers/pescados_controller.rb:47:in `destroy'
+Completed 302 Found in 1382ms (ActiveRecord: 1672.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-16 12:14:34 -0300
+Processing by PescadosController#index as HTML
+  [1m[36mUsuario Load (250.4ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (296.5ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  Rendered pescados/index.html.erb within layouts/application (Duration: 306.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 310.8ms | GC: 0.0ms)
+Completed 200 OK in 600ms (Views: 18.6ms | ActiveRecord: 546.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados/new" for ::1 at 2026-06-16 12:14:37 -0300
+Processing by PescadosController#new as HTML
+  [1m[36mUsuario Load (250.7ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='new',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/new.html.erb within layouts/application
+  Rendered pescados/new.html.erb within layouts/application (Duration: 142.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 144.7ms | GC: 0.0ms)
+Completed 200 OK in 691ms (Views: 146.0ms | ActiveRecord: 250.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/pescados" for ::1 at 2026-06-16 12:15:03 -0300
+Processing by PescadosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pescado"=>{"nome"=>"Lula", "descricao"=>"Lula fresca viva", "quantidade"=>"2", "unidade"=>"unidade", "preco_por_unidade"=>"100", "data_pesca"=>"2026-06-16"}, "commit"=>"✓ Salvar Pescado"}
+  [1m[36mUsuario Load (281.7ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='create',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+[31mUnpermitted parameter: :data_pesca. Context: { controller: PescadosController, action: create, request: #<ActionDispatch::Request:0x00000270b0f88220>, params: {"authenticity_token"=>"[FILTERED]", "pescado"=>{"nome"=>"Lula", "descricao"=>"Lula fresca viva", "quantidade"=>"2", "unidade"=>"unidade", "preco_por_unidade"=>"100", "data_pesca"=>"2026-06-16"}, "commit"=>"✓ Salvar Pescado", "controller"=>"pescados", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/new.html.erb within layouts/application
+  Rendered pescados/new.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 1047ms (Views: 6.3ms | ActiveRecord: 281.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/pescados" for ::1 at 2026-06-16 12:15:15 -0300
+Processing by PescadosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pescado"=>{"nome"=>"Lula", "descricao"=>"Lula fresca viva", "quantidade"=>"2", "unidade"=>"unidade", "preco_por_unidade"=>"100", "data_pesca"=>"2026-06-16"}, "commit"=>"✓ Salvar Pescado"}
+  [1m[36mUsuario Load (450.3ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='create',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+[31mUnpermitted parameter: :data_pesca. Context: { controller: PescadosController, action: create, request: #<ActionDispatch::Request:0x00000270b0e3fc88>, params: {"authenticity_token"=>"[FILTERED]", "pescado"=>{"nome"=>"Lula", "descricao"=>"Lula fresca viva", "quantidade"=>"2", "unidade"=>"unidade", "preco_por_unidade"=>"100", "data_pesca"=>"2026-06-16"}, "commit"=>"✓ Salvar Pescado", "controller"=>"pescados", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/new.html.erb within layouts/application
+  Rendered pescados/new.html.erb within layouts/application (Duration: 5.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 522ms (Views: 16.4ms | ActiveRecord: 450.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/pescados" for ::1 at 2026-06-16 12:15:27 -0300
+Processing by PescadosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pescado"=>{"nome"=>"Lula", "descricao"=>"Lula fresca viva", "quantidade"=>"2", "unidade"=>"unidade", "preco_por_unidade"=>"100", "data_pesca"=>"2026-06-16"}, "commit"=>"✓ Salvar Pescado"}
+  [1m[36mUsuario Load (304.7ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='create',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+[31mUnpermitted parameter: :data_pesca. Context: { controller: PescadosController, action: create, request: #<ActionDispatch::Request:0x00000270b0e30b48>, params: {"authenticity_token"=>"[FILTERED]", "pescado"=>{"nome"=>"Lula", "descricao"=>"Lula fresca viva", "quantidade"=>"2", "unidade"=>"unidade", "preco_por_unidade"=>"100", "data_pesca"=>"2026-06-16"}, "commit"=>"✓ Salvar Pescado", "controller"=>"pescados", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/new.html.erb within layouts/application
+  Rendered pescados/new.html.erb within layouts/application (Duration: 8.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 373ms (Views: 15.4ms | ActiveRecord: 304.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-16 12:15:32 -0300
+Processing by PescadosController#index as HTML
+  [1m[36mUsuario Load (467.4ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (196.8ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  Rendered pescados/index.html.erb within layouts/application (Duration: 213.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 220.6ms | GC: 0.0ms)
+Completed 200 OK in 737ms (Views: 28.5ms | ActiveRecord: 664.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados/new" for ::1 at 2026-06-16 12:15:34 -0300
+Processing by PescadosController#new as HTML
+  [1m[36mUsuario Load (327.9ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='new',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/new.html.erb within layouts/application
+  Rendered pescados/new.html.erb within layouts/application (Duration: 5.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | GC: 0.0ms)
+Completed 200 OK in 391ms (Views: 13.1ms | ActiveRecord: 327.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/pescados" for ::1 at 2026-06-16 12:15:53 -0300
+Processing by PescadosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pescado"=>{"nome"=>"teste", "descricao"=>"teste", "quantidade"=>"5", "unidade"=>"kg", "preco_por_unidade"=>"50", "data_pesca"=>"2026-06-15"}, "commit"=>"✓ Salvar Pescado"}
+  [1m[36mUsuario Load (303.1ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='create',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+[31mUnpermitted parameter: :data_pesca. Context: { controller: PescadosController, action: create, request: #<ActionDispatch::Request:0x00000270b0a66418>, params: {"authenticity_token"=>"[FILTERED]", "pescado"=>{"nome"=>"teste", "descricao"=>"teste", "quantidade"=>"5", "unidade"=>"kg", "preco_por_unidade"=>"50", "data_pesca"=>"2026-06-15"}, "commit"=>"✓ Salvar Pescado", "controller"=>"pescados", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/new.html.erb within layouts/application
+  Rendered pescados/new.html.erb within layouts/application (Duration: 4.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 362ms (Views: 13.1ms | ActiveRecord: 303.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2026-06-16 12:16:24 -0300
+Processing by SessoesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/login
+↳ app/controllers/sessoes_controller.rb:35:in `destroy'
+Completed 302 Found in 38ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2026-06-16 12:16:24 -0300
+Processing by SessoesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessoes/new.html.erb within layouts/application
+  Rendered sessoes/new.html.erb within layouts/application (Duration: 4.3ms | GC: 0.0ms)
+  [1m[36mUsuario Load (318.6ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" IS NULL LIMIT 1 /*action='new',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 336.5ms | GC: 0.0ms)
+Completed 200 OK in 370ms (Views: 20.7ms | ActiveRecord: 318.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-06-16 12:16:42 -0300
+Processing by SessoesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"marealta", "senha"=>"senha345", "commit"=>"Entrar"}
+  [1m[36mUsuario Load (296.2ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."login" = 'marealta' LIMIT 1 /*action='create',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/sessoes_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+↳ app/controllers/sessoes_controller.rb:22:in `create'
+Completed 302 Found in 351ms (ActiveRecord: 296.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-06-16 12:16:43 -0300
+Processing by CatalogoController#index as HTML
+  [1m[36mUsuario Load (378.3ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 2 LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (198.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 204.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 209.6ms | GC: 0.0ms)
+Completed 200 OK in 631ms (Views: 14.5ms | ActiveRecord: 576.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2026-06-16 12:16:49 -0300
+Processing by SessoesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/login
+↳ app/controllers/sessoes_controller.rb:35:in `destroy'
+Completed 302 Found in 39ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2026-06-16 12:16:49 -0300
+Processing by SessoesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessoes/new.html.erb within layouts/application
+  Rendered sessoes/new.html.erb within layouts/application (Duration: 5.9ms | GC: 0.0ms)
+  [1m[36mUsuario Load (199.4ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" IS NULL LIMIT 1 /*action='new',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 214.2ms | GC: 0.0ms)
+Completed 200 OK in 259ms (Views: 17.2ms | ActiveRecord: 199.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-06-16 12:24:58 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (233.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GastroMar'*/[0m
+Processing by CatalogoController#index as HTML
+  [1m[36mUsuario Load (200.0ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" IS NULL LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+Redirected to http://localhost:3000/login
+↳ app/controllers/application_controller.rb:24:in `verificar_login'
+Filter chain halted as :verificar_login rendered or redirected
+Completed 302 Found in 5944ms (ActiveRecord: 3457.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2026-06-16 12:25:10 -0300
+Processing by SessoesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessoes/new.html.erb within layouts/application
+  Rendered sessoes/new.html.erb within layouts/application (Duration: 18.1ms | GC: 0.0ms)
+  [1m[36mUsuario Load (252.8ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" IS NULL LIMIT 1 /*action='new',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 281.8ms | GC: 0.0ms)
+Completed 200 OK in 422ms (Views: 60.4ms | ActiveRecord: 252.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-06-16 12:25:30 -0300
+Processing by SessoesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"zepescador", "senha"=>"senha123", "commit"=>"Entrar"}
+  [1m[36mUsuario Load (175.9ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."login" = 'zepescador' LIMIT 1 /*action='create',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/sessoes_controller.rb:9:in `create'
+Redirected to http://localhost:3000/pescados
+↳ app/controllers/sessoes_controller.rb:20:in `create'
+Completed 302 Found in 447ms (ActiveRecord: 380.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-16 12:25:31 -0300
+Processing by PescadosController#index as HTML
+  [1m[36mUsuario Load (249.4ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+Started POST "/login" for ::1 at 2026-06-16 12:25:31 -0300
+Processing by SessoesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"zepescador", "senha"=>"senha123", "commit"=>"Entrar"}
+  [1m[36mPescado Exists? (221.6ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  Rendered pescados/index.html.erb within layouts/application (Duration: 440.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 445.4ms | GC: 0.0ms)
+Completed 200 OK in 828ms (Views: 52.6ms | ActiveRecord: 673.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mUsuario Load (203.2ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."login" = 'zepescador' LIMIT 1 /*action='create',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/sessoes_controller.rb:9:in `create'
+Redirected to http://localhost:3000/pescados
+↳ app/controllers/sessoes_controller.rb:20:in `create'
+Completed 302 Found in 4573ms (ActiveRecord: 2406.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-16 12:25:36 -0300
+Processing by PescadosController#index as HTML
+  [1m[36mUsuario Load (320.0ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (294.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  Rendered pescados/index.html.erb within layouts/application (Duration: 302.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 307.9ms | GC: 0.0ms)
+Completed 200 OK in 656ms (Views: 16.4ms | ActiveRecord: 614.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados/new" for ::1 at 2026-06-16 12:25:39 -0300
+Processing by PescadosController#new as HTML
+  [1m[36mUsuario Load (246.5ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='new',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/new.html.erb within layouts/application
+  Rendered pescados/new.html.erb within layouts/application (Duration: 35.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | GC: 0.0ms)
+Completed 200 OK in 363ms (Views: 42.2ms | ActiveRecord: 246.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/pescados" for ::1 at 2026-06-16 12:26:11 -0300
+Processing by PescadosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pescado"=>{"nome"=>"Camarão", "descricao"=>"Camarão fresco com casca ", "quantidade"=>"50", "unidade"=>"kg", "preco_por_unidade"=>"50.6", "data_pesca"=>"2026-06-16"}, "commit"=>"✓ Salvar Pescado"}
+  [1m[36mUsuario Load (253.9ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='create',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  [1m[36mTRANSACTION (284.8ms)[0m  [1m[35mBEGIN /*action='create',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:27:in `create'
+  [1m[36mCACHE Usuario Load (0.0ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1[0m
+  ↳ app/controllers/pescados_controller.rb:27:in `create'
+  [1m[36mPescado Create (273.0ms)[0m  [1m[32mINSERT INTO "pescados" ("nome", "quantidade", "unidade", "preco_por_unidade", "descricao", "disponivel", "data_pesca", "id_usuario", "created_at", "updated_at") VALUES ('Camarão', 50.0, 'kg', 50.6, 'Camarão fresco com casca ', TRUE, '2026-06-16', 1, '2026-06-16 15:26:13.054362', '2026-06-16 15:26:13.054362') RETURNING "id_pescado" /*action='create',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:27:in `create'
+  [1m[36mTRANSACTION (310.8ms)[0m  [1m[35mCOMMIT /*action='create',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:27:in `create'
+Redirected to http://localhost:3000/pescados
+↳ app/controllers/pescados_controller.rb:28:in `create'
+Completed 302 Found in 2060ms (ActiveRecord: 1702.6ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-16 12:26:13 -0300
+Processing by PescadosController#index as HTML
+  [1m[36mUsuario Load (196.7ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (232.4ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  [1m[36mPescado Load (292.9ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:12
+  Rendered pescados/index.html.erb within layouts/application (Duration: 543.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 548.1ms | GC: 0.0ms)
+Completed 200 OK in 785ms (Views: 26.4ms | ActiveRecord: 722.0ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2026-06-16 12:26:18 -0300
+Processing by SessoesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/login
+↳ app/controllers/sessoes_controller.rb:35:in `destroy'
+Completed 302 Found in 37ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2026-06-16 12:26:18 -0300
+Processing by SessoesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessoes/new.html.erb within layouts/application
+  Rendered sessoes/new.html.erb within layouts/application (Duration: 5.6ms | GC: 0.0ms)
+  [1m[36mUsuario Load (285.1ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" IS NULL LIMIT 1 /*action='new',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 302.4ms | GC: 0.0ms)
+Completed 200 OK in 334ms (Views: 20.6ms | ActiveRecord: 285.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-06-16 12:26:25 -0300
+Processing by SessoesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"marealta", "senha"=>"senha345", "commit"=>"Entrar"}
+  [1m[36mUsuario Load (275.8ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."login" = 'marealta' LIMIT 1 /*action='create',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/sessoes_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+↳ app/controllers/sessoes_controller.rb:22:in `create'
+Completed 302 Found in 305ms (ActiveRecord: 275.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-06-16 12:26:25 -0300
+Processing by CatalogoController#index as HTML
+  [1m[36mUsuario Load (252.1ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 2 LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (240.7ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" WHERE "pescados"."disponivel" = TRUE LIMIT 1 /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:9
+  [1m[36mPescado Load (311.2ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."disponivel" = TRUE /*action='index',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/index.html.erb:11
+  Rendered catalogo/index.html.erb within layouts/application (Duration: 604.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 609.0ms | GC: 0.0ms)
+Completed 200 OK in 934ms (Views: 81.2ms | ActiveRecord: 803.9ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/catalogo/2" for ::1 at 2026-06-16 12:26:29 -0300
+Processing by CatalogoController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (189.7ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 2 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  [1m[36mPescado Load (289.3ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 2 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/catalogo_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/show.html.erb within layouts/application
+  [1m[36mUsuario Load (199.6ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/show.html.erb:47
+  Rendered catalogo/show.html.erb within layouts/application (Duration: 209.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 213.3ms | GC: 0.0ms)
+Completed 200 OK in 877ms (Views: 15.8ms | ActiveRecord: 678.5ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/catalogo/2" for ::1 at 2026-06-16 12:26:46 -0300
+Processing by CatalogoController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (354.1ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 2 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  [1m[36mPescado Load (315.7ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 2 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/catalogo_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/show.html.erb within layouts/application
+  [1m[36mUsuario Load (277.6ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/show.html.erb:47
+  Rendered catalogo/show.html.erb within layouts/application (Duration: 289.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 294.8ms | GC: 0.0ms)
+Completed 200 OK in 1020ms (Views: 20.7ms | ActiveRecord: 947.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/catalogo/2" for ::1 at 2026-06-16 12:26:51 -0300
+Processing by CatalogoController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (225.3ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 2 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  [1m[36mPescado Load (194.9ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 2 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/controllers/catalogo_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering catalogo/show.html.erb within layouts/application
+  [1m[36mUsuario Load (233.0ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='catalogo'*/[0m
+  ↳ app/views/catalogo/show.html.erb:47
+  Rendered catalogo/show.html.erb within layouts/application (Duration: 244.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 248.3ms | GC: 0.0ms)
+Completed 200 OK in 728ms (Views: 18.2ms | ActiveRecord: 653.1ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2026-06-16 12:29:21 -0300
+Processing by SessoesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/login
+↳ app/controllers/sessoes_controller.rb:35:in `destroy'
+Completed 302 Found in 44ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2026-06-16 12:29:22 -0300
+Processing by SessoesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessoes/new.html.erb within layouts/application
+  Rendered sessoes/new.html.erb within layouts/application (Duration: 22.7ms | GC: 0.0ms)
+  [1m[36mUsuario Load (297.3ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" IS NULL LIMIT 1 /*action='new',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendered layout layouts/application.html.erb (Duration: 330.6ms | GC: 0.0ms)
+Completed 200 OK in 364ms (Views: 36.2ms | ActiveRecord: 297.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-06-16 12:29:27 -0300
+Processing by SessoesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"zepescador", "senha"=>"senha123", "commit"=>"Entrar"}
+  [1m[36mUsuario Load (271.8ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."login" = 'zepescador' LIMIT 1 /*action='create',application='GastroMar',controller='sessoes'*/[0m
+  ↳ app/controllers/sessoes_controller.rb:9:in `create'
+Redirected to http://localhost:3000/pescados
+↳ app/controllers/sessoes_controller.rb:20:in `create'
+Completed 302 Found in 326ms (ActiveRecord: 271.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados" for ::1 at 2026-06-16 12:29:28 -0300
+Processing by PescadosController#index as HTML
+  [1m[36mUsuario Load (246.2ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/index.html.erb within layouts/application
+  [1m[36mPescado Exists? (296.8ms)[0m  [1m[34mSELECT 1 AS one FROM "pescados" LIMIT 1 /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:10
+  [1m[36mPescado Load (307.4ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" /*action='index',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/views/pescados/index.html.erb:12
+  Rendered pescados/index.html.erb within layouts/application (Duration: 618.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 623.9ms | GC: 0.0ms)
+Completed 200 OK in 911ms (Views: 22.9ms | ActiveRecord: 850.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados/2" for ::1 at 2026-06-16 12:29:32 -0300
+Processing by PescadosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (311.4ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='show',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  [1m[36mPescado Load (403.0ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 2 LIMIT 1 /*action='show',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:58:in `set_pescado'
+  Rendering layout layouts/application.html.erb
+  Rendering pescados/show.html.erb within layouts/application
+  Rendered pescados/show.html.erb within layouts/application (Duration: 5.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | GC: 0.0ms)
+Completed 200 OK in 788ms (Views: 13.6ms | ActiveRecord: 714.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pescados/2/edit" for ::1 at 2026-06-16 12:29:35 -0300
+Processing by PescadosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (289.7ms)[0m  [1m[34mSELECT "usuario".* FROM "usuario" WHERE "usuario"."id_usuario" = 1 LIMIT 1 /*action='edit',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/application_controller.rb:16:in `current_usuario'
+  [1m[36mPescado Load (293.6ms)[0m  [1m[34mSELECT "pescados".* FROM "pescados" WHERE "pescados"."id_pescado" = 2 LIMIT 1 /*action='edit',application='GastroMar',controller='pescados'*/[0m
+  ↳ app/controllers/pescados_controller.rb:58:in `set_pescado'
+Completed 406 Not Acceptable in 673ms (ActiveRecord: 583.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::MissingExactTemplate (PescadosController#edit is missing a template for request formats: text/html):
+  
+actionpack (8.1.3) lib/action_controller/metal/implicit_render.rb:49:in `default_render'
+actionpack (8.1.3) lib/action_controller/metal/basic_implicit_render.rb:9:in `send_action'
+actionpack (8.1.3) lib/abstract_controller/base.rb:221:in `process_action'
+actionpack (8.1.3) lib/action_controller/metal/rendering.rb:199:in `process_action'
+actionpack (8.1.3) lib/abstract_controller/callbacks.rb:267:in `block in process_action'
+activesupport (8.1.3) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+turbo-rails (2.0.23) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.23) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (8.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (8.1.3) lib/action_text/rendering.rb:24:in `with_renderer'
+actiontext (8.1.3) lib/action_text/engine.rb:72:in `block (4 levels) in <class:Engine>'
+activesupport (8.1.3) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (8.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (8.1.3) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (8.1.3) lib/abstract_controller/callbacks.rb:266:in `process_action'
+actionpack (8.1.3) lib/action_controller/metal/rescue.rb:36:in `process_action'
+actionpack (8.1.3) lib/action_controller/metal/instrumentation.rb:76:in `block in process_action'
+activesupport (8.1.3) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (8.1.3) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (8.1.3) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (8.1.3) lib/action_controller/metal/instrumentation.rb:75:in `process_action'
+actionpack (8.1.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (8.1.3) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (8.1.3) lib/abstract_controller/base.rb:154:in `process'
+actionview (8.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (8.1.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.1.3) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.1.3) lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+actionpack (8.1.3) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:35:in `block in serve'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:86:in `block in recognize'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:66:in `each'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:66:in `recognize'
+actionpack (8.1.3) lib/action_dispatch/journey/router.rb:31:in `serve'
+actionpack (8.1.3) lib/action_dispatch/routing/route_set.rb:906:in `call'
+railties (8.1.3) lib/rails/engine/lazy_route_set.rb:60:in `call'
+rack (3.2.6) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.2.6) lib/rack/etag.rb:29:in `call'
+rack (3.2.6) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.6) lib/rack/head.rb:15:in `call'
+actionpack (8.1.3) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.2) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/cookies.rb:708:in `call'
+activerecord (8.1.3) lib/active_record/migration.rb:671:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (8.1.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:20:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.3.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.3.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.1.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.1.3) lib/rails/rack/logger.rb:29:in `call'
+propshaft (1.3.2) lib/propshaft/quiet_assets.rb:11:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/remote_ip.rb:98:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.6) lib/rack/method_override.rb:28:in `call'
+rack (3.2.6) lib/rack/runtime.rb:24:in `call'
+activesupport (8.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.1.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/executor.rb:20:in `call'
+propshaft (1.3.2) lib/propshaft/server.rb:37:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.6) lib/rack/sendfile.rb:131:in `call'
+actionpack (8.1.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.1.3) lib/rails/engine.rb:534:in `call'
+puma (8.0.2) lib/puma/configuration.rb:305:in `call'
+puma (8.0.2) lib/puma/response.rb:79:in `block in handle_request'
+puma (8.0.2) lib/puma/thread_pool.rb:434:in `with_force_shutdown'
+puma (8.0.2) lib/puma/response.rb:78:in `handle_request'
+puma (8.0.2) lib/puma/server.rb:508:in `process_client'
+puma (8.0.2) lib/puma/server.rb:263:in `block in run'
+puma (8.0.2) lib/puma/thread_pool.rb:246:in `block in spawn_thread'

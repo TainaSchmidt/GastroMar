@@ -40,12 +40,14 @@
 
 <div class="actions-bar">
   <%= link_to "← Voltar ao Catálogo", catalogo_path, class: "btn-secondary" %>
+  <%= link_to '← Voltar ao Catálogo', catalogo_index_path, class: "btn-secondary" %>
   
   <% # Lógica do WhatsApp %>
   <% 
-    telefone = "5511999999999" # Substitua pela variável do telefone do pescador no futuro: @pescado.user.telefone
-    mensagem = "Olá! Vi seu anúncio de #{@pescado.quantidade} #{@pescado.unidade} de #{@pescado.nome} no GastroMar. Ainda está disponível?"
-    url_whatsapp = "https://wa.me/#{telefone}?text=#{CGI.escape(mensagem)}"
+  telefone = @pescado.usuario.telefone.gsub(/\D/, "") # Remove parênteses ou espaços se houver
+  # Caso o telefone não tenha o código do país (55), adicione: "55" + telefone
+  mensagem = "Olá! Vi seu anúncio de #{@pescado.quantidade} #{@pescado.unidade} de #{@pescado.nome} no GastroMar. Ainda está disponível?"
+  url_whatsapp = "https://wa.me/#{telefone}?text=#{CGI.escape(mensagem)}"
   %>
   <%= link_to "💬 Fazer Pedido via WhatsApp", url_whatsapp, target: "_blank", class: "btn-primary", style: "background: #25D366;" %>
 </div>

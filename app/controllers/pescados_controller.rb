@@ -19,6 +19,10 @@ class PescadosController < ApplicationController
   # CREATE (Salva no banco de dados)
   def create
     @pescado = Pescado.new(pescado_params)
+  
+    # ASSOCIAÇÃO MÁGICA: Pega o ID do usuário que está logado na sessão 
+    # e joga na coluna id_usuario do pescado antes de salvar!
+    @pescado.id_usuario = session[:usuario_id]
 
     if @pescado.save
       redirect_to pescados_path, notice: "Pescado cadastrado com sucesso!"
@@ -55,13 +59,15 @@ class PescadosController < ApplicationController
   end
 
   # Proteção do Rails: só permite salvar no banco os campos que a gente autorizar aqui
+  def pescado_params
     params.require(:pescado).permit(
-      :nome, 
-      :quantidade, 
-      :unidade, 
-      :preco, 
-      :descricao, 
-      :disponivel
-    )
+    :nome, 
+    :quantidade, 
+    :unidade, 
+    :preco_por_unidade, 
+    :descricao, 
+    :data_pesca, 
+    :disponivel
+  )
   end
 end
